@@ -19,6 +19,7 @@ int main(int argc, const char * argv[]) {
         std::cout << i + 1 << std::endl;
     }
     std::cout << "Position: " << moped.getPosition() << "km" << std::endl;
+    std::cout << "Hello World!" << std::endl;
     
     return 0;
 }
