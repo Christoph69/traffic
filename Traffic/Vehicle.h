@@ -14,13 +14,14 @@
 class Vehicle{
     public:
     Vehicle();
+    ~Vehicle();
     void setSpeed(int geschwindigkeit);
     double getPosition();
     
     private:
     double position;
     int tempo;
-    std::clock_t startTime;
+    time_t startTime;
 };
 
 #endif /* Vehicle_h */
