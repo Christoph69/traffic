@@ -17,10 +17,10 @@ Vehicle::~Vehicle(){
     
 }
 
-double Vehicle::getPosition(){
+double Vehicle::getPosition(unitLength unit){
     double position = difftime(time(nullptr), this->startTime) * this->speed;
     position += this->position;
-    return position;
+    return position/unit;
 }
 
 void Vehicle::setSpeed(int newSpeed){

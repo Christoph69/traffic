@@ -18,7 +18,7 @@ int main(int argc, const char * argv[]) {
         std::this_thread::sleep_for (std::chrono::seconds(1));
         std::cout << i + 1 << std::endl;
     }
-    std::cout << "Position: " << moped.getPosition() << "km" << std::endl;
+    std::cout << "Position: " << moped.getPosition(KILOMETER) << "km" << std::endl;
     std::cout << "Hello World!" << std::endl;
     
     return 0;

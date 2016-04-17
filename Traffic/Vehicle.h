@@ -5,11 +5,13 @@
 //  Created by Christoph Wagner on 14/04/16.
 //  Copyright © 2016 de.christophwagner. All rights reserved.
 //
-
 #ifndef Vehicle_h
 #define Vehicle_h
 
 #include <ctime>
+
+// Konstanten zur Längenumrechnung
+enum unitLength{METER = 1, KILOMETER = 1000, MILE = 1609};
 
 class Vehicle{
     public:
@@ -20,7 +22,7 @@ class Vehicle{
     // setzt die neue Geschwindigkeit für das ausgewählte Fahrzeug in m/s
     void setSpeed(int newSpeed);
     // gibt die aktuelle Position des Fahrzeuges zurück
-    double getPosition();
+    double getPosition(unitLength unit);
     // gibt die aktuelle Geschwindigkeit des Fahrzeuges zurück
     double getSpeed();
     
