@@ -13,14 +13,18 @@
 
 class Vehicle{
     public:
+    // Konstruktor
     Vehicle();
+    // Destruktor
     ~Vehicle();
-    void setSpeed(int geschwindigkeit);
+    // setzt die neue Geschwindigkeit für das ausgewählte Fahrzeug
+    void setSpeed(int newSpeed);
+    // gibt die aktuelle Position des Fahrzeuges zurück
     double getPosition();
     
     private:
     double position;
-    int tempo;
+    int speed;
     time_t startTime;
 };
 

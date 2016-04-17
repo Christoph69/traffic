@@ -5,11 +5,10 @@
 //  Created by Christoph Wagner on 14/04/16.
 //  Copyright © 2016 de.christophwagner. All rights reserved.
 //
-#include <iostream>
 #include "Vehicle.h"
 
 // init
-Vehicle::Vehicle() : position(0), tempo(0)
+Vehicle::Vehicle() : position(0), speed(0)
 {
     this->startTime = time(0);
 }
@@ -19,16 +18,14 @@ Vehicle::~Vehicle(){
     
 }
 
-// geb die Position zurück
 double Vehicle::getPosition(){
-    this->position += difftime(time(0), this->startTime)/3600 * this->tempo;
+    this->position += difftime(time(0), this->startTime)/3600 * this->speed;
     this->startTime = time(0);
     return this->position;
 }
 
-// neue Geschwindigkeit setzen und position verrechnen
-void Vehicle::setSpeed(int geschwindigkeit){
-    this->position += std::difftime(time(0), this->startTime)/3600 * this->tempo;
-    this->tempo = geschwindigkeit;
+void Vehicle::setSpeed(int newSpeed){
+    this->position += std::difftime(time(0), this->startTime)/3600 * this->speed;
+    this->speed = newSpeed;
     this->startTime = time(0);
 }
