@@ -19,13 +19,13 @@ Vehicle::~Vehicle(){
 }
 
 double Vehicle::getPosition(){
-    this->position += difftime(time(0), this->startTime)/3600 * this->speed;
+    this->position += difftime(time(0), this->startTime) * this->speed;
     this->startTime = time(0);
     return this->position;
 }
 
 void Vehicle::setSpeed(int newSpeed){
-    this->position += std::difftime(time(0), this->startTime)/3600 * this->speed;
+    this->position += std::difftime(time(0), this->startTime) * this->speed;
     this->speed = newSpeed;
     this->startTime = time(0);
 }

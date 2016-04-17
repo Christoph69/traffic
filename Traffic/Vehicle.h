@@ -17,7 +17,7 @@ class Vehicle{
     Vehicle();
     // Destruktor
     ~Vehicle();
-    // setzt die neue Geschwindigkeit für das ausgewählte Fahrzeug
+    // setzt die neue Geschwindigkeit für das ausgewählte Fahrzeug in m/s
     void setSpeed(int newSpeed);
     // gibt die aktuelle Position des Fahrzeuges zurück
     double getPosition();
