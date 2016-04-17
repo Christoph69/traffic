@@ -8,9 +8,8 @@
 #include "Vehicle.h"
 
 // init
-Vehicle::Vehicle() : position(0), speed(0)
-{
-    this->startTime = time(0);
+Vehicle::Vehicle() : position(0), speed(0), startTime(time(nullptr)){
+    
 }
 
 // dekonstruktor
@@ -19,13 +18,17 @@ Vehicle::~Vehicle(){
 }
 
 double Vehicle::getPosition(){
-    this->position += difftime(time(0), this->startTime) * this->speed;
-    this->startTime = time(0);
-    return this->position;
+    double position = difftime(time(nullptr), this->startTime) * this->speed;
+    position += this->position;
+    return position;
 }
 
 void Vehicle::setSpeed(int newSpeed){
-    this->position += std::difftime(time(0), this->startTime) * this->speed;
+    this->position += difftime(time(nullptr), this->startTime) * this->speed;
     this->speed = newSpeed;
-    this->startTime = time(0);
+    this->startTime = time(nullptr);
+}
+
+double Vehicle::getSpeed(){
+    return this->speed;
 }

@@ -21,10 +21,12 @@ class Vehicle{
     void setSpeed(int newSpeed);
     // gibt die aktuelle Position des Fahrzeuges zurück
     double getPosition();
+    // gibt die aktuelle Geschwindigkeit des Fahrzeuges zurück
+    double getSpeed();
     
     private:
     double position;
-    int speed;
+    double speed;
     time_t startTime;
 };
 
