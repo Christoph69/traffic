@@ -14,7 +14,7 @@
 enum unitLength{METER = 1, KILOMETER = 1000, MILE = 1609};
 // Konstanten zur Geschwindigkeitsumrechnung
 enum unitSpeed{METER_PER_SEC, KILOMETER_PER_H, MILE_PER_H};
-extern const double unitSpeedFactor[];
+extern const double unitSpeedFactor[]; // Platzhalter für die Faktoren zur Umrechnung
 
 class Vehicle{
     public:
