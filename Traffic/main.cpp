@@ -13,7 +13,7 @@
 
 int main(int argc, const char * argv[]) {
     Vehicle moped;
-    moped.setSpeed(100);
+    moped.setSpeed(100, KILOMETER_PER_H);
     for (int i = 0; i < 5; i++) {
         std::this_thread::sleep_for (std::chrono::seconds(1));
         std::cout << i + 1 << std::endl;

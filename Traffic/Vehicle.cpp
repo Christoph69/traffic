@@ -7,6 +7,9 @@
 //
 #include "Vehicle.h"
 
+// Werte für die UnitSpeedFactoren
+const double unitSpeedFactor[] = {1.0, 3.6, 3600.0/1609.0};
+
 // init
 Vehicle::Vehicle() : position(0), speed(0), startTime(time(nullptr)){
     
@@ -23,12 +26,12 @@ double Vehicle::getPosition(unitLength unit){
     return position/unit;
 }
 
-void Vehicle::setSpeed(int newSpeed){
+void Vehicle::setSpeed(int newSpeed, unitSpeed uSpeed){
     this->position += difftime(time(nullptr), this->startTime) * this->speed;
-    this->speed = newSpeed;
+    this->speed = newSpeed / unitSpeedFactor[uSpeed];
     this->startTime = time(nullptr);
 }
 
-double Vehicle::getSpeed(){
-    return this->speed;
+double Vehicle::getSpeed(unitSpeed uSpeed){
+    return this->speed * unitSpeedFactor[uSpeed];
 }
