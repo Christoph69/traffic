@@ -18,3 +18,16 @@ Motor::~Motor(){
     
 }
 
+bool Motor::fillTank(double amount){
+    bool gueltig = false;
+    double freeTank = this->maxTank - this->nowTank;
+    if (freeTank >= amount){
+        gueltig = true;
+        this->nowTank += amount;
+    }
+    return gueltig;
+}
+
+double Motor::getFuelLevel(){
+    return this->nowTank - this->fuelPerLength*100/this->getPosition(KILOMETER);
+}

@@ -18,7 +18,7 @@ public:
     // wird er abgelehnt und 'false' zurückgebeben
     bool fillTank(double amount);
     // gibt die aktuelle Menge des Treibstoffes zurück
-    double getFuelAmount();
+    double getFuelLevel();
 private:
     double maxTank; // Maximales Fassungsvermögen des Treibstofftankes
     double nowTank; // aktueller Füllstand des Treibstofftankes
