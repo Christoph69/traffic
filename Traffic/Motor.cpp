@@ -8,3 +8,13 @@
 
 #include "Motor.h"
 
+// init
+Motor::Motor() : maxTank(0), nowTank(0), fuelPerLength(0){
+    
+}
+
+// dekonstruktor
+Motor::~Motor(){
+    
+}
+
