@@ -21,6 +21,8 @@ public:
     double getFuelLevel();
     // legt die Größe des Tankes fest
     void setTankSize(double size);
+    // lget den Kraftstoffverbrauch pro 100km fest in Liter
+    void setConsumption(double consumption);
 private:
     double maxTank; // Maximales Fassungsvermögen des Treibstofftankes
     double nowTank; // aktueller Füllstand des Treibstofftankes
