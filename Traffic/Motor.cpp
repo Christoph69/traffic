@@ -31,3 +31,7 @@ bool Motor::fillTank(double amount){
 double Motor::getFuelLevel(){
     return this->nowTank - this->fuelPerLength*100/this->getPosition(KILOMETER);
 }
+
+void Motor::setTankSize(double size){
+    this->maxTank = size;
+}

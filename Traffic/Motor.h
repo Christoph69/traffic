@@ -19,6 +19,8 @@ public:
     bool fillTank(double amount);
     // gibt die aktuelle Menge des Treibstoffes zurück
     double getFuelLevel();
+    // legt die Größe des Tankes fest
+    void setTankSize(double size);
 private:
     double maxTank; // Maximales Fassungsvermögen des Treibstofftankes
     double nowTank; // aktueller Füllstand des Treibstofftankes
