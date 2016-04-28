@@ -5,8 +5,8 @@
 //  Created by Christoph Wagner on 18/04/16.
 //  Copyright © 2016 de.christophwagner. All rights reserved.
 //
-#ifndef MotorVehicle_hpp
-#define MotorVehicle_hpp
+#ifndef MotorVehicle_h
+#define MotorVehicle_h
 
 #include "Vehicle.h"
 
@@ -31,4 +31,4 @@ private:
     double fuelPerLength;   // Kraftstoffverbrauch auf 100km
 };
 
-#endif /* MotorVehicle_hpp */
+#endif /* MotorVehicle_h */

@@ -9,14 +9,14 @@
 #include <iostream>
 #include <thread>
 #include <chrono>
-#include "Motor.h"
+#include "MotorVehicle.h"
 #include "VehicleQueue.h"
 
 int main(int argc, const char * argv[]) {
     VehicleQueue liste;
     
     Vehicle *pV;
-    Motor Motor;
+    MotorVehicle Motor;
     pV = &Motor;
     liste.append(pV);
     pV->setSpeed(100, KILOMETER_PER_H);
