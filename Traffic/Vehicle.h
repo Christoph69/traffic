@@ -23,13 +23,13 @@ class Vehicle{
     // Destruktor
     ~Vehicle();
     // setzt die neue Geschwindigkeit für das ausgewählte Fahrzeug in m/s
-    void setSpeed(int newSpeed, unitSpeed uSpeed);
+    virtual void setSpeed(int newSpeed, unitSpeed uSpeed) = 0; // int newSpeed, unitSpeed uSpeed
     // gibt die aktuelle Position des Fahrzeuges zurück
-    double getPosition(unitLength unit);
+    virtual double getPosition(unitLength unit) = 0; // unitLength unit
     // gibt die aktuelle Geschwindigkeit des Fahrzeuges zurück
     double getSpeed(unitSpeed uSpeed);
     
-    private:
+    protected:
     double position;
     double speed;
     time_t startTime;

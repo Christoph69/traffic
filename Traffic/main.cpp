@@ -12,6 +12,7 @@
 #include "Motor.h"
 
 int main(int argc, const char * argv[]) {
+    /*
     Motor moped;
     moped.setSpeed(100, METER_PER_SEC);
     moped.setTankSize(60);
@@ -23,5 +24,14 @@ int main(int argc, const char * argv[]) {
     }
     std::cout << "Position:     " << moped.getPosition(KILOMETER) << "km" << std::endl;
     std::cout << "Treibstoff:   " << moped.getFuelLevel() << "l" << std::endl;
+    */
+    
+    Vehicle *pV;
+    Motor Motor;
+    pV = &Motor;
+    pV->setSpeed(100, KILOMETER_PER_H);
+    std::this_thread::sleep_for (std::chrono::seconds(5));
+    std::cout << "Posi: " << pV->getPosition(METER);
+    
     return 0;
 }

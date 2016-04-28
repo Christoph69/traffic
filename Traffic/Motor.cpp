@@ -39,3 +39,16 @@ void Motor::setTankSize(double size){
 void Motor::setConsumption(double consumption){
     this->fuelPerLength = consumption;
 }
+
+double Motor::getPosition(unitLength unit){
+    double position = difftime(time(nullptr), this->startTime) * this->speed;
+    position += this->position;
+    return position/unit;
+}
+
+void Motor::setSpeed(int newSpeed, unitSpeed uSpeed){
+    this->position += difftime(time(nullptr), this->startTime) * this->speed;
+    this->speed = newSpeed / unitSpeedFactor[uSpeed];
+    this->startTime = time(nullptr);
+}
+
