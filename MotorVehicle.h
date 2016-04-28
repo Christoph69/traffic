@@ -1,19 +1,19 @@
 //
-//  Motor.h
+//  MotorVehicle.h
 //  Traffic
 //
 //  Created by Christoph Wagner on 18/04/16.
 //  Copyright © 2016 de.christophwagner. All rights reserved.
 //
-#ifndef Motor_hpp
-#define Motor_hpp
+#ifndef MotorVehicle_hpp
+#define MotorVehicle_hpp
 
 #include "Vehicle.h"
 
-class Motor : public Vehicle{
+class MotorVehicle : public Vehicle{
 public:
-    Motor();
-    ~Motor();
+    MotorVehicle();
+    ~MotorVehicle();
     // füllt den Tank mit neuem Treibstoff auf, wenn der übergebene Treibstoff, die maximal aufnehmbare Menge übersteigt
     // wird er abgelehnt und 'false' zurückgebeben
     bool fillTank(double amount);
@@ -31,4 +31,4 @@ private:
     double fuelPerLength;   // Kraftstoffverbrauch auf 100km
 };
 
-#endif /* Motor_hpp */
+#endif /* MotorVehicle_hpp */

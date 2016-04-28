@@ -6,19 +6,19 @@
 //  Copyright © 2016 de.christophwagner. All rights reserved.
 //
 
-#include "Motor.h"
+#include "MotorVehicle.h"
 
 // init
-Motor::Motor() : maxTank(0), nowTank(0), fuelPerLength(0){
+MotorVehicle::MotorVehicle() : maxTank(0), nowTank(0), fuelPerLength(0){
     
 }
 
 // dekonstruktor
-Motor::~Motor(){
+MotorVehicle::~MotorVehicle(){
     
 }
 
-bool Motor::fillTank(double amount){
+bool MotorVehicle::fillTank(double amount){
     bool gueltig = false;
     double freeTank = this->maxTank - this->nowTank;
     if (freeTank >= amount){
@@ -28,25 +28,25 @@ bool Motor::fillTank(double amount){
     return gueltig;
 }
 
-double Motor::getFuelLevel(){
+double MotorVehicle::getFuelLevel(){
     return this->nowTank - this->fuelPerLength/100.0*this->getPosition(KILOMETER);
 }
 
-void Motor::setTankSize(double size){
+void MotorVehicle::setTankSize(double size){
     this->maxTank = size;
 }
 
-void Motor::setConsumption(double consumption){
+void MotorVehicle::setConsumption(double consumption){
     this->fuelPerLength = consumption;
 }
 
-double Motor::getPosition(unitLength unit){
+double MotorVehicle::getPosition(unitLength unit){
     double position = difftime(time(nullptr), this->startTime) * this->speed;
     position += this->position;
     return position/unit;
 }
 
-void Motor::setSpeed(int newSpeed, unitSpeed uSpeed){
+void MotorVehicle::setSpeed(int newSpeed, unitSpeed uSpeed){
     this->position += difftime(time(nullptr), this->startTime) * this->speed;
     this->speed = newSpeed / unitSpeedFactor[uSpeed];
     this->startTime = time(nullptr);
