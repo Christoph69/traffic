@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		590F0E8F1CC4C99600344E09 /* Motor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 590F0E8D1CC4C99600344E09 /* Motor.cpp */; };
-		59D1C3871CBF68E600F577E0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59D1C3861CBF68E600F577E0 /* main.cpp */; };
-		59D1C38F1CBF693200F577E0 /* Vehicle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59D1C38D1CBF693200F577E0 /* Vehicle.cpp */; };
+		593EDB8E1CD28E7800B7B9B2 /* Motor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 593EDB8D1CD28E7800B7B9B2 /* Motor.cpp */; };
+		593EDB911CD28EA500B7B9B2 /* Vehicle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 593EDB8F1CD28EA500B7B9B2 /* Vehicle.cpp */; };
+		593EDB941CD28ECD00B7B9B2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 593EDB921CD28ECD00B7B9B2 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,12 +25,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		590F0E8D1CC4C99600344E09 /* Motor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Motor.cpp; sourceTree = "<group>"; };
-		590F0E8E1CC4C99600344E09 /* Motor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Motor.h; sourceTree = "<group>"; };
+		593EDB8D1CD28E7800B7B9B2 /* Motor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Motor.cpp; sourceTree = "<group>"; };
+		593EDB8F1CD28EA500B7B9B2 /* Vehicle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vehicle.cpp; sourceTree = "<group>"; };
+		593EDB901CD28EA500B7B9B2 /* Vehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vehicle.h; sourceTree = "<group>"; };
+		593EDB921CD28ECD00B7B9B2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		593EDB931CD28ECD00B7B9B2 /* Motor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Motor.h; sourceTree = "<group>"; };
+		5959ECC21CD282F9005387C9 /* libVehicleQueue.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVehicleQueue.a; path = "../../Library/Developer/Xcode/DerivedData/VehicleQueue-examvadxhjodlkhjtelqkpftmbqw/Build/Products/Debug/libVehicleQueue.a"; sourceTree = "<group>"; };
 		59D1C3831CBF68E600F577E0 /* Traffic */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Traffic; sourceTree = BUILT_PRODUCTS_DIR; };
-		59D1C3861CBF68E600F577E0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		59D1C38D1CBF693200F577E0 /* Vehicle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vehicle.cpp; sourceTree = "<group>"; };
-		59D1C38E1CBF693200F577E0 /* Vehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vehicle.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +48,12 @@
 		59D1C37A1CBF68E600F577E0 = {
 			isa = PBXGroup;
 			children = (
-				59D1C3851CBF68E600F577E0 /* Traffic */,
+				593EDB921CD28ECD00B7B9B2 /* main.cpp */,
+				593EDB931CD28ECD00B7B9B2 /* Motor.h */,
+				593EDB8F1CD28EA500B7B9B2 /* Vehicle.cpp */,
+				593EDB901CD28EA500B7B9B2 /* Vehicle.h */,
+				593EDB8D1CD28E7800B7B9B2 /* Motor.cpp */,
+				5959ECC21CD282F9005387C9 /* libVehicleQueue.a */,
 				59D1C3841CBF68E600F577E0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,18 +64,6 @@
 				59D1C3831CBF68E600F577E0 /* Traffic */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		59D1C3851CBF68E600F577E0 /* Traffic */ = {
-			isa = PBXGroup;
-			children = (
-				59D1C3861CBF68E600F577E0 /* main.cpp */,
-				59D1C38D1CBF693200F577E0 /* Vehicle.cpp */,
-				59D1C38E1CBF693200F577E0 /* Vehicle.h */,
-				590F0E8D1CC4C99600344E09 /* Motor.cpp */,
-				590F0E8E1CC4C99600344E09 /* Motor.h */,
-			);
-			path = Traffic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,9 +122,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				590F0E8F1CC4C99600344E09 /* Motor.cpp in Sources */,
-				59D1C38F1CBF693200F577E0 /* Vehicle.cpp in Sources */,
-				59D1C3871CBF68E600F577E0 /* main.cpp in Sources */,
+				593EDB911CD28EA500B7B9B2 /* Vehicle.cpp in Sources */,
+				593EDB8E1CD28E7800B7B9B2 /* Motor.cpp in Sources */,
+				593EDB941CD28ECD00B7B9B2 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +215,7 @@
 		59D1C38B1CBF68E700F577E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = "~/GitHUB/VehicleQueue/**";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -228,6 +223,7 @@
 		59D1C38C1CBF68E700F577E0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = "~/GitHUB/VehicleQueue/**";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
