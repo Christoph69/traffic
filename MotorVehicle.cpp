@@ -40,7 +40,7 @@ void MotorVehicle::setConsumption(double consumption){
     this->fuelPerLength = consumption;
 }
 
-double MotorVehicle::getPosition(unitLength unit){
+double MotorVehicle::getPosition(unitLength unit) const{
     double position = difftime(time(nullptr), this->startTime) * this->speed;
     position += this->position;
     return position/unit;

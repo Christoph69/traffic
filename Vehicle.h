@@ -25,9 +25,9 @@ public:
     // setzt die neue Geschwindigkeit für das ausgewählte Fahrzeug in m/s
     void setSpeed(int newSpeed, unitSpeed uSpeed); // int newSpeed, unitSpeed uSpeed
     // gibt die aktuelle Position des Fahrzeuges zurück
-    virtual double getPosition(unitLength unit) = 0; // unitLength unit
+    virtual double getPosition(unitLength unit) const = 0; // unitLength unit
     // gibt die aktuelle Geschwindigkeit des Fahrzeuges zurück
-    double getSpeed(unitSpeed uSpeed);
+    double getSpeed(unitSpeed uSpeed) const;
 protected:
     double position;
     double speed;

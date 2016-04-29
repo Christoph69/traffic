@@ -34,6 +34,6 @@ void Vehicle::setSpeed(int newSpeed, unitSpeed uSpeed){
     this->startTime = time(nullptr);
 }
 
-double Vehicle::getSpeed(unitSpeed uSpeed){
+double Vehicle::getSpeed(unitSpeed uSpeed) const{
     return this->speed * unitSpeedFactor[uSpeed];
 }

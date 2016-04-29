@@ -24,7 +24,7 @@ public:
     // lget den Kraftstoffverbrauch pro 100km fest in Liter
     void setConsumption(double consumption);
     // gibt die aktuelle Position des Fahrzeuges zurück
-    double getPosition(unitLength unit);
+    double getPosition(unitLength unit) const;
 private:
     double maxTank; // Maximales Fassungsvermögen des Treibstofftankes
     double nowTank; // aktueller Füllstand des Treibstofftankes
