@@ -12,7 +12,7 @@
 
 class MotorVehicle : public Vehicle{
 public:
-    MotorVehicle();
+    MotorVehicle(double tankSize);
     ~MotorVehicle();
     // füllt den Tank mit neuem Treibstoff auf, wenn der übergebene Treibstoff, die maximal aufnehmbare Menge übersteigt
     // wird er abgelehnt und 'false' zurückgebeben
@@ -20,13 +20,13 @@ public:
     // gibt die aktuelle Menge des Treibstoffes zurück
     double getFuelLevel();
     // legt die Größe des Tankes fest
-    void setTankSize(double size);
+    // void setTankSize(double size);
     // lget den Kraftstoffverbrauch pro 100km fest in Liter
     void setConsumption(double consumption);
     // gibt die aktuelle Position des Fahrzeuges zurück
     double getPosition(unitLength unit) const;
 private:
-    double maxTank; // Maximales Fassungsvermögen des Treibstofftankes
+    const double maxTank; // Maximales Fassungsvermögen des Treibstofftankes
     double nowTank; // aktueller Füllstand des Treibstofftankes
     double fuelPerLength;   // Kraftstoffverbrauch auf 100km
 };

@@ -9,7 +9,7 @@
 #include "MotorVehicle.h"
 
 // init
-MotorVehicle::MotorVehicle() : maxTank(0), nowTank(0), fuelPerLength(0){
+MotorVehicle::MotorVehicle(double tankSize) : maxTank(tankSize), nowTank(0), fuelPerLength(0){
     
 }
 
@@ -31,11 +31,11 @@ bool MotorVehicle::fillTank(double amount){
 double MotorVehicle::getFuelLevel(){
     return this->nowTank - this->fuelPerLength/100.0*this->getPosition(KILOMETER);
 }
-
+/*
 void MotorVehicle::setTankSize(double size){
     this->maxTank = size;
 }
-
+*/
 void MotorVehicle::setConsumption(double consumption){
     this->fuelPerLength = consumption;
 }
