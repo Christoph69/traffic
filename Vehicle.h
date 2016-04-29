@@ -27,7 +27,7 @@ public:
     // gibt die aktuelle Position des Fahrzeuges zurück
     virtual double getPosition(unitLength unit) const = 0; // unitLength unit
     // gibt die aktuelle Geschwindigkeit des Fahrzeuges zurück
-    double getSpeed(unitSpeed uSpeed) const;
+    virtual double getSpeed(unitSpeed uSpeed) const;
 protected:
     double position;
     double speed;

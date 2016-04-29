@@ -7,6 +7,7 @@
 //
 
 #include "MotorVehicle.h"
+#include <cmath>
 
 // init
 MotorVehicle::MotorVehicle(double tankSize) : maxTank(tankSize), nowTank(0), fuelPerLength(0){
@@ -28,8 +29,8 @@ bool MotorVehicle::fillTank(double amount){
     return gueltig;
 }
 
-double MotorVehicle::getFuelLevel(){
-    return this->nowTank - this->fuelPerLength/100.0*this->getPosition(KILOMETER);
+double MotorVehicle::getFuelLevel() const{
+    return this->nowTank - this->fuelPerLength/100.0* std::abs(this->getPosition(KILOMETER) - this->position);
 }
 /*
 void MotorVehicle::setTankSize(double size){
@@ -41,14 +42,21 @@ void MotorVehicle::setConsumption(double consumption){
 }
 
 double MotorVehicle::getPosition(unitLength unit) const{
-    double position = difftime(time(nullptr), this->startTime) * this->speed;
-    position += this->position;
+    // Reichweite ab der letzten Zustandänderung
+    double reach = this->nowTank / this->fuelPerLength;
+    // Theorethische Position
+    double position = this->Vehicle::getPosition(KILOMETER);
+    // theoretisch gefahrene Strecke
+    double distance = this->Vehicle::getPosition(KILOMETER);
+    if(std::abs(distance) < reach){
+        position = this->position + ((distance < 0) ? -reach : reach);
+    }
+    
+    
     return position/unit;
 }
 
-/*void MotorVehicle::setSpeed(int newSpeed, unitSpeed uSpeed){
-    this->position += difftime(time(nullptr), this->startTime) * this->speed;
-    this->speed = newSpeed / unitSpeedFactor[uSpeed];
-    this->startTime = time(nullptr);
-}*/
+double MotorVehicle::getSpeed(unitSpeed uSpeed) const{
+    return ((this->getFuelLevel() > 1e-10) ? this->Vehicle::getSpeed(uSpeed) : 0);
+}
 
