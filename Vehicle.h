@@ -17,19 +17,18 @@ enum unitSpeed{METER_PER_SEC, KILOMETER_PER_H, MILE_PER_H};
 extern const double unitSpeedFactor[]; // Platzhalter für die Faktoren zur Umrechnung
 
 class Vehicle{
-    public:
+public:
     // Konstruktor
     Vehicle();
     // Destruktor
     ~Vehicle();
     // setzt die neue Geschwindigkeit für das ausgewählte Fahrzeug in m/s
-    virtual void setSpeed(int newSpeed, unitSpeed uSpeed) = 0; // int newSpeed, unitSpeed uSpeed
+    void setSpeed(int newSpeed, unitSpeed uSpeed); // int newSpeed, unitSpeed uSpeed
     // gibt die aktuelle Position des Fahrzeuges zurück
     virtual double getPosition(unitLength unit) = 0; // unitLength unit
     // gibt die aktuelle Geschwindigkeit des Fahrzeuges zurück
     double getSpeed(unitSpeed uSpeed);
-    
-    protected:
+protected:
     double position;
     double speed;
     time_t startTime;

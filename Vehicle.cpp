@@ -26,13 +26,13 @@ double Vehicle::getPosition(unitLength unit){
     position += this->position;
     return position/unit;
 }
-
-virtual void Vehicle::setSpeed(int newSpeed, unitSpeed uSpeed){
+*/
+ 
+void Vehicle::setSpeed(int newSpeed, unitSpeed uSpeed){
     this->position += difftime(time(nullptr), this->startTime) * this->speed;
     this->speed = newSpeed / unitSpeedFactor[uSpeed];
     this->startTime = time(nullptr);
 }
-*/
 
 double Vehicle::getSpeed(unitSpeed uSpeed){
     return this->speed * unitSpeedFactor[uSpeed];

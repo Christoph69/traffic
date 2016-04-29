@@ -23,7 +23,7 @@ public:
     void setTankSize(double size);
     // lget den Kraftstoffverbrauch pro 100km fest in Liter
     void setConsumption(double consumption);
-    void setSpeed(int newSpeed, unitSpeed uSpeed);
+    // gibt die aktuelle Position des Fahrzeuges zurück
     double getPosition(unitLength unit);
 private:
     double maxTank; // Maximales Fassungsvermögen des Treibstofftankes
