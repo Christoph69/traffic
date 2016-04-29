@@ -46,9 +46,9 @@ double MotorVehicle::getPosition(unitLength unit){
     return position/unit;
 }
 
-void MotorVehicle::setSpeed(int newSpeed, unitSpeed uSpeed){
+/*void MotorVehicle::setSpeed(int newSpeed, unitSpeed uSpeed){
     this->position += difftime(time(nullptr), this->startTime) * this->speed;
     this->speed = newSpeed / unitSpeedFactor[uSpeed];
     this->startTime = time(nullptr);
-}
+}*/
 
