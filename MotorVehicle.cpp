@@ -10,7 +10,7 @@
 #include <cmath>
 
 // init
-MotorVehicle::MotorVehicle(double tankSize) : maxTank(tankSize), nowTank(0), fuelPerLength(0){
+MotorVehicle::MotorVehicle(double tankSize, double consumption) : maxTank(tankSize), nowTank(0), consumption(consumption){
     
 }
 
@@ -30,29 +30,28 @@ bool MotorVehicle::fillTank(double amount){
 }
 
 double MotorVehicle::getFuelLevel() const{
-    return this->nowTank - this->fuelPerLength/100.0* std::abs(this->getPosition(KILOMETER) - this->position);
+    return this->nowTank - this->consumption/100.0* std::abs(this->getPosition(KILOMETER) - this->position);
 }
+
 /*
 void MotorVehicle::setTankSize(double size){
     this->maxTank = size;
 }
-*/
+
 void MotorVehicle::setConsumption(double consumption){
     this->fuelPerLength = consumption;
 }
+*/
 
 double MotorVehicle::getPosition(unitLength unit) const{
     // Reichweite ab der letzten Zustandänderung
-    double reach = this->nowTank / this->fuelPerLength;
+    double reach = this->nowTank / this->consumption;
     // Theorethische Position
     double position = this->Vehicle::getPosition(KILOMETER);
     // theoretisch gefahrene Strecke
     double distance = this->Vehicle::getPosition(KILOMETER);
-    if(std::abs(distance) < reach){
+    if(std::abs(distance) < reach)
         position = this->position + ((distance < 0) ? -reach : reach);
-    }
-    
-    
     return position/unit;
 }
 
